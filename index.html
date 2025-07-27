@@ -549,6 +549,23 @@
                 } catch(e) { console.error("Could not parse widget config", e); }
             });
         }
+document.getElementById("generate-summary").addEventListener("click", () => {
+    const summary = `
+📊 Market Briefing (Simulated):
+
+- 🇮🇳 Nifty 50 dropped 64 points (-0.27%) to 23,500.
+- 📉 Sensex saw mild selling pressure, down 147 points.
+- 🌏 S&P 500, Dow Jones open flat on mixed earnings.
+- 🛢️ Crude oil remains steady while gold holds firm.
+- 📉 VIX indicates low volatility.
+- 🏦 No rate action expected this week from RBI or Fed.
+
+🔮 Outlook: Neutral to bearish in short term. Monitor global risk sentiment.
+    `;
+    alert(summary);
+});
+
+
     </script>
 </body>
 </html>
