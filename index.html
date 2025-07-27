@@ -161,31 +161,47 @@
             </script>
         </div>
 
-        <!-- Dashboard Grid -->
-        <main>
-            <!-- Section: AI & Market Flows -->
-            <section class="mb-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- AI Briefing -->
-                <div class="lg:col-span-1 flex items-center justify-center">
-                    <button id="generate-briefing-btn" class="gemini-button w-full">
-                        ✨ Generate AI Market Briefing
-                    </button>
-                </div>
-                <!-- FII/DII Data -->
-                <div id="fii-dii-data" class="lg:col-span-2 market-card"></div>
-            </section>
+       <!-- Dashboard Grid -->
+<main>
 
-            <!-- Section: Indian Indices -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-500 pl-3">Indian Indices</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                    <div id="nifty-50" class="market-card"></div>
-                    <div id="sensex" class="market-card"></div>
-                    <div id="gift-nifty" class="market-card"></div>
-                    <div id="india-vix" class="market-card"></div>
-                </div>
-            </section>
+    <!-- Section: AI Briefing & Market Flows -->
+    <section class="mb-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
 
+        <!-- AI Market Briefing Button -->
+        <div class="flex items-center justify-center">
+            <button id="generate-summary" class="px-6 py-3 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition">
+                ✨ Generate AI Market Briefing
+            </button>
+        </div>
+
+        <!-- FII/DII Data Card -->
+        <div id="fii-dii-data" class="lg:col-span-2 market-card flex flex-col justify-center">
+            <h3 class="text-lg font-semibold mb-2 text-white">Market Flows (Yesterday)</h3>
+            <div class="flex flex-col sm:flex-row justify-between gap-4 text-center sm:text-left">
+                <div>
+                    <p class="text-sm text-gray-400">FII Net Flow</p>
+                    <p class="text-xl font-bold text-emerald-400">0.49k Cr</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-400">DII Net Flow</p>
+                    <p class="text-xl font-bold text-emerald-400">3.62k Cr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Indian Indices -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-500 pl-3 text-white">Indian Indices</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div id="nifty-50" class="market-card"></div>
+            <div id="sensex" class="market-card"></div>
+            <div id="gift-nifty" class="market-card"></div>
+            <div id="india-vix" class="market-card"></div>
+        </div>
+    </section>
+
+</main>
             <!-- Section: Global Markets -->
             <section class="mb-8">
                 <h2 class="text-2xl font-semibold mb-4 border-l-4 border-green-500 pl-3">Global Markets</h2>
