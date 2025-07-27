@@ -161,47 +161,23 @@
             </script>
         </div>
 
-       <!-- Dashboard Grid -->
-<main>
+        <!-- Dashboard Grid -->
+        <main>
+            <!-- FII/DII Data -->
+                <div id="fii-dii-data" class="lg:col-span-2 market-card"></div>
+            </section>
 
-    <!-- Section: AI Briefing & Market Flows -->
-    <section class="mb-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-        <!-- AI Market Briefing Button -->
-        <div class="flex items-center justify-center">
-            <button id="generate-summary" class="px-6 py-3 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition">
-                ✨ Generate AI Market Briefing
-            </button>
-        </div>
-
-        <!-- FII/DII Data Card -->
-        <div id="fii-dii-data" class="lg:col-span-2 market-card flex flex-col justify-center">
-            <h3 class="text-lg font-semibold mb-2 text-white">Market Flows (Yesterday)</h3>
-            <div class="flex flex-col sm:flex-row justify-between gap-4 text-center sm:text-left">
-                <div>
-                    <p class="text-sm text-gray-400">FII Net Flow</p>
-                    <p class="text-xl font-bold text-emerald-400">0.49k Cr</p>
+            <!-- Section: Indian Indices -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-500 pl-3">Indian Indices</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div id="nifty-50" class="market-card"></div>
+                    <div id="sensex" class="market-card"></div>
+                    <div id="gift-nifty" class="market-card"></div>
+                    <div id="india-vix" class="market-card"></div>
                 </div>
-                <div>
-                    <p class="text-sm text-gray-400">DII Net Flow</p>
-                    <p class="text-xl font-bold text-emerald-400">3.62k Cr</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Section: Indian Indices -->
-    <section class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-500 pl-3 text-white">Indian Indices</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <div id="nifty-50" class="market-card"></div>
-            <div id="sensex" class="market-card"></div>
-            <div id="gift-nifty" class="market-card"></div>
-            <div id="india-vix" class="market-card"></div>
-        </div>
-    </section>
-
-</main>
             <!-- Section: Global Markets -->
             <section class="mb-8">
                 <h2 class="text-2xl font-semibold mb-4 border-l-4 border-green-500 pl-3">Global Markets</h2>
@@ -565,23 +541,6 @@
                 } catch(e) { console.error("Could not parse widget config", e); }
             });
         }
-document.getElementById("generate-summary").addEventListener("click", () => {
-    const summary = `
-📊 Market Briefing (Simulated):
-
-- 🇮🇳 Nifty 50 dropped 64 points (-0.27%) to 23,500.
-- 📉 Sensex saw mild selling pressure, down 147 points.
-- 🌏 S&P 500, Dow Jones open flat on mixed earnings.
-- 🛢️ Crude oil remains steady while gold holds firm.
-- 📉 VIX indicates low volatility.
-- 🏦 No rate action expected this week from RBI or Fed.
-
-🔮 Outlook: Neutral to bearish in short term. Monitor global risk sentiment.
-    `;
-    alert(summary);
-});
-
-
     </script>
 </body>
 </html>
